@@ -13,12 +13,14 @@ import {MenuComponent} from './menus/menu/menu.component';
 import {MenuItemComponent} from './menus/menu-item/menu-item.component';
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import {PopupMenuComponent} from './menus/popup-menu/popup-menu.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
   declarations: [SpaBodyComponent, SpaHeaderComponent, SpaContentComponent, SpaFooterComponent, IconBarComponent, ScreenLargeDirective,
-                 ScreenSmallDirective, MenuComponent, MenuItemComponent],
-  imports: [CommonModule, RouterOutlet, FormsModule, RouterLink, RouterLinkActive],
+                 ScreenSmallDirective, MenuComponent, MenuItemComponent, PopupMenuComponent],
+  imports: [CommonModule, RouterOutlet, FormsModule, RouterLink, RouterLinkActive, BrowserAnimationsModule],
   exports: [SpaBodyComponent],
   providers: [SpaConfigService, SpaConfigService, MenuService]
 })
