@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {ScreenService} from "../service/screen.service";
+import {MenuService} from "../service/menu.service";
 
 @Component({
   selector: 'spa-content',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./spa-content.component.css']
 })
 export class SpaContentComponent {
-
+  constructor(public screenService: ScreenService, public menuService: MenuService) { }
 }
