@@ -1,11 +1,13 @@
 import {Component, ElementRef, HostBinding, HostListener, Input, OnInit, Renderer2} from '@angular/core';
 import {MenuItem, MenuService} from "../../service/menu.service";
 import {NavigationEnd, Router} from "@angular/router";
+import {visibilityPopup} from "../../service/animations";
 
 @Component({
   selector: 'spa-menu-item',
   templateUrl: './menu-item.component.html',
-  styleUrls: ['./menu-item.component.css']
+  styleUrls: ['./menu-item.component.css'],
+  animations: [visibilityPopup]
 })
 export class MenuItemComponent implements OnInit {
   @Input() item: MenuItem;

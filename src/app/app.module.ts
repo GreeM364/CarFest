@@ -15,10 +15,12 @@ import {UserService} from "./services/user.service";
 import {UserApi} from "../spa/users/user-api";
 import {AuthGuard} from "./services/auth-guard.service";
 import {AppDataService} from "./services/app-data.service";
+import {CarPanelComponent} from "./panels/car-panel/car-panel.component";
+import {ImagePanelComponent} from './panels/image-panel/image-panel.component'
 
 @NgModule({
   declarations: [AppComponent, AppHomeComponent, SettingsComponent, CarDetailComponent, CarListComponent, CarMaintComponent,
-                 AuthenticatedComponent],
+                 AuthenticatedComponent, CarPanelComponent, ImagePanelComponent],
   imports: [BrowserModule, SpaModule, RouterModule.forRoot(appRoutes)],
   providers: [UserService, {provide: UserApi, useExisting: UserService}, AuthGuard, AppDataService],
   bootstrap: [AppComponent]

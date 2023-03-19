@@ -3,11 +3,13 @@ import {UserApi} from "../user-api";
 import {NgForm} from "@angular/forms";
 import {UserService} from "../../../app/services/user.service";
 import {Router} from "@angular/router";
+import {visibility} from "../../service/animations";
 
 @Component({
   selector: 'spa-sign-in',
   templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.css']
+  styleUrls: ['./sign-in.component.css'],
+  animations: [visibility]
 })
 export class SignInComponent {
   submitting = false;
