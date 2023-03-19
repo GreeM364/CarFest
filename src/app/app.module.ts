@@ -14,12 +14,13 @@ import {AuthenticatedComponent} from './routes/authenticated/authenticated.compo
 import {UserService} from "./services/user.service";
 import {UserApi} from "../spa/users/user-api";
 import {AuthGuard} from "./services/auth-guard.service";
+import {AppDataService} from "./services/app-data.service";
 
 @NgModule({
   declarations: [AppComponent, AppHomeComponent, SettingsComponent, CarDetailComponent, CarListComponent, CarMaintComponent,
                  AuthenticatedComponent],
   imports: [BrowserModule, SpaModule, RouterModule.forRoot(appRoutes)],
-  providers: [UserService, {provide: UserApi, useExisting: UserService}, AuthGuard],
+  providers: [UserService, {provide: UserApi, useExisting: UserService}, AuthGuard, AppDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

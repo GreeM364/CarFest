@@ -17,13 +17,17 @@ import {PopupMenuComponent} from './menus/popup-menu/popup-menu.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {SignInComponent} from './users/sign-in/sign-in.component';
 import {RegistrationComponent} from './users/registration/registration.component';
+import {DynamicFieldComponent} from './dynamicForms/dynamic-field/dynamic-field.component';
+import {DynamicFormComponent} from './dynamicForms/dynamic-form/dynamic-form.component';
+import {ReactiveFormsModule} from '@angular/forms'
 
 
 @NgModule({
   declarations: [SpaBodyComponent, SpaHeaderComponent, SpaContentComponent, SpaFooterComponent, IconBarComponent, ScreenLargeDirective,
-                 ScreenSmallDirective, MenuComponent, MenuItemComponent, PopupMenuComponent, SignInComponent, RegistrationComponent],
-  imports: [CommonModule, RouterOutlet, FormsModule, RouterLink, RouterLinkActive, BrowserAnimationsModule],
-  exports: [SpaBodyComponent],
+    ScreenSmallDirective, MenuComponent, MenuItemComponent, PopupMenuComponent, SignInComponent, RegistrationComponent,
+    DynamicFieldComponent, DynamicFormComponent],
+  imports: [CommonModule, RouterOutlet, FormsModule, RouterLink, RouterLinkActive, BrowserAnimationsModule, ReactiveFormsModule],
+  exports: [SpaBodyComponent, DynamicFormComponent],
   providers: [SpaConfigService, SpaConfigService, MenuService]
 })
 export class SpaModule{}

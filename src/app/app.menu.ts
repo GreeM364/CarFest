@@ -63,7 +63,7 @@ export const AppMenuItems: Array<MenuItem> = [
       {
         text: 'Car maintenance',
         icon: '../../assets/img/settings.png',
-        route: '/authenticated/car-maintenance',
+        route: '/authenticated/car-maint',
         submenu: null
       },
       {
