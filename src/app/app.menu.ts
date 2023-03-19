@@ -14,44 +14,44 @@ export const AppMenuItems: Array<MenuItem> = [
           {
             text: 'Ferrari',
             icon: '../../assets/img/car.png',
-            route: '/car-detail/Ferrari',
+            route: '/authenticated/car-detail/Ferrari',
             submenu: null
           },
           {
             text: 'Bugatti',
             icon: '../../assets/img/car.png',
-            route: '/car-detail/Bugatti',
+            route: '/authenticated/car-detail/Bugatti',
             submenu: null
           },
           {
             text: 'Lamborghini',
             icon: '../../assets/img/car.png',
-            route: '/car-detail/Lamborghini',
+            route: '/authenticated/car-detail/Lamborghini',
             submenu: null
           },
           {
             text: 'Maserati',
             icon: '../../assets/img/car.png',
-            route: '/car-detail/Maserati',
+            route: '/authenticated/car-detail/Maserati',
             submenu: null
           }]
       },
       {
         text: 'Price top',
         icon: '../../assets/img/car.png',
-        route: '/car-list/1',
+        route: '/authenticated/car-list/1',
         submenu: null
       },
       {
         text: 'Top 3',
         icon: '../../assets/img/car.png',
-        route: '/car-list/3',
+        route: '/authenticated/car-list/3',
         submenu: null
       },
       {
         text: 'Top 5',
         icon: '../../assets/img/car.png',
-        route: '/car-list/5',
+        route: '/authenticated/car-list/5',
         submenu: null
       }]
   },
@@ -63,20 +63,20 @@ export const AppMenuItems: Array<MenuItem> = [
       {
         text: 'Car maintenance',
         icon: '../../assets/img/settings.png',
-        route: '/car-maintenance',
+        route: '/authenticated/car-maintenance',
         submenu: null
       },
       {
         text: 'Settings',
         icon: '../../assets/img/settings.png',
-        route: '/settings',
+        route: '/authenticated/settings',
         submenu: null
       }]
   },
   {
     text: 'Home',
     icon: '../../assets/img/home.png',
-    route: '/home',
+    route: '/authenticated/home',
     submenu: null
   }]
 

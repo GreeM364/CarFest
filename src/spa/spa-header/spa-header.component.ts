@@ -8,7 +8,7 @@ import {MenuService} from "../service/menu.service";
   styleUrls: ['./spa-header.component.css']
 })
 export class SpaHeaderComponent implements OnInit {
-
+  flagForIcons = true;
   constructor(public screenService: ScreenService, public menuService: MenuService) { }
 
   ngOnInit() {
