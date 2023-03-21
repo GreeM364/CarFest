@@ -34,11 +34,14 @@ export class CarMaintComponent {
     this.isDeleting = false;
     this.deleteId = null;
   }
-  deleteCar(id: number) {
+  deleteCar (id: number) {
     this.isDeleting = true;
-    this.appDataService.deleteCar(id).subscribe(c => this.cancelDelete(), error => {
-      this.deleteError = error;
-      this.isDeleting = false;
-    });
+    this.appDataService.deleteCar(id).subscribe(c => {this.cancelDelete();
+        this.CarList = this.CarList.filter(carItem => carItem.id !== id);
+      },
+      error => {
+        this.deleteError = error;
+        this.isDeleting = false;
+      });
   }
 }

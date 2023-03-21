@@ -17,11 +17,12 @@ import {AuthGuard} from "./services/auth-guard.service";
 import {AppDataService} from "./services/app-data.service";
 import {CarPanelComponent} from "./panels/car-panel/car-panel.component";
 import {ImagePanelComponent} from './panels/image-panel/image-panel.component'
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [AppComponent, AppHomeComponent, SettingsComponent, CarDetailComponent, CarListComponent, CarMaintComponent,
                  AuthenticatedComponent, CarPanelComponent, ImagePanelComponent],
-  imports: [BrowserModule, SpaModule, RouterModule.forRoot(appRoutes)],
+  imports: [BrowserModule, SpaModule, RouterModule.forRoot(appRoutes), HttpClientModule],
   providers: [UserService, {provide: UserApi, useExisting: UserService}, AuthGuard, AppDataService],
   bootstrap: [AppComponent]
 })

@@ -16,6 +16,10 @@ export class RegistrationComponent {
   formError: string;
   constructor(private router: Router, private userService: UserService) { }
   onSubmit(registerForm: NgForm) {
-
+    this.registering = true;
+    this.userService.registerUser(registerForm.value).subscribe(() => {
+      setTimeout(() => { this.hasAdded = true; }, 1200);
+      setTimeout(() => { this.router.navigate(['/sign-in']); }, 2000);
+    })
   }
 }

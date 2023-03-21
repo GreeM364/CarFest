@@ -47,10 +47,10 @@ export class CarDetailComponent implements OnInit {
   errorMessage: string;
   constructor(private router: Router, private appDataService: AppDataService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.operation = this.route.snapshot.params['operation'];
-    if (this.operation === 'create') {
-      this.car = { id: 0, name: '', model: '', price: null };
+    if( this.operation === 'create') {
+      this.car = { id: 0, name: '', model: '', price: null};
     } else {
       this.appDataService.getCar(+this.route.snapshot.params['id']).subscribe((car: Car) => this.car = car);
     }
@@ -60,12 +60,14 @@ export class CarDetailComponent implements OnInit {
     this.errorMessage = null;
     this.appDataService.createCar(car).subscribe(
       c => this.router.navigate(['/authenticated/car-maint']),
-      error => this.errorMessage = 'Error creating car');
+      error => this.errorMessage ='Error creating car'
+    );
   }
   updateCar(car: Car) {
     this.errorMessage = null;
     this.appDataService.updateCar(car).subscribe(
       c => this.router.navigate(['/authenticated/car-maint']),
-      error => this.errorMessage = 'Error updating car');
+      error => this.errorMessage ='Error updating car'
+    );
   }
 }

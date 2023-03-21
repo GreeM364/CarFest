@@ -2,20 +2,24 @@
   display: block;
 }
 
+.btn{
+  color: black;
+  font-size: medium;
+}
+
 table {
-  margin-top: 20px;
-  padding: 20px;
-}
-
-tr:nth-child(even) {
-  background-color: #c2c2c2;
-}
-
-tr {
-  padding: 10px 0;
+  margin-top: 10px;
 }
 
 .btn-sm {
   width: 60px;
-  margin-left: 5px;
+  margin-left: 15px;
+}
+
+.header{
+  margin-bottom: 15px;
+}
+
+:disabled{
+  background-color: darkgray;
 }
