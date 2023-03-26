@@ -4,7 +4,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {SpaModule} from "../spa/spa.module";
 import {AppHomeComponent} from './routes/app-home/app-home.component';
-import {SettingsComponent} from './routes/settings/settings.component';
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./routes/app.routes";
 import {CarDetailComponent} from './routes/car-detail/car-detail.component';
@@ -20,7 +19,7 @@ import {ImagePanelComponent} from './panels/image-panel/image-panel.component'
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-  declarations: [AppComponent, AppHomeComponent, SettingsComponent, CarDetailComponent, CarListComponent, CarMaintComponent,
+  declarations: [AppComponent, AppHomeComponent, CarDetailComponent, CarListComponent, CarMaintComponent,
                  AuthenticatedComponent, CarPanelComponent, ImagePanelComponent],
   imports: [BrowserModule, SpaModule, RouterModule.forRoot(appRoutes), HttpClientModule],
   providers: [UserService, {provide: UserApi, useExisting: UserService}, AuthGuard, AppDataService],

@@ -1,6 +1,5 @@
 import {Routes} from "@angular/router";
 import {AppHomeComponent} from "./app-home/app-home.component";
-import {SettingsComponent} from "./settings/settings.component";
 import {CarMaintComponent} from "./car-maint/car-maint.component";
 import {CarListComponent} from "./car-list/car-list.component";
 import {CarDetailComponent} from "./car-detail/car-detail.component";
@@ -16,8 +15,8 @@ export const appRoutes: Routes = [
     path: 'authenticated', component: AuthenticatedComponent, canActivate: [AuthGuard], children: [
       {
         path: '', canActivateChild: [AuthGuard], children: [
+          { path: '', redirectTo: 'home', pathMatch: 'full' },
           { path: 'home', component: AppHomeComponent },
-          { path: 'settings', component: SettingsComponent },
           { path: 'car-list/:count', component: CarListComponent },
           { path: 'car-detail/:id/:operation', component: CarDetailComponent },
           { path: 'car-maint', component: CarMaintComponent }

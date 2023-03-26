@@ -7,36 +7,6 @@ export const AppMenuItems: Array<MenuItem> = [
     route: null,
     submenu: [
       {
-        text: 'Select',
-        icon: '../../assets/img/car.png',
-        route: null,
-        submenu: [
-          {
-            text: 'Ferrari',
-            icon: '../../assets/img/car.png',
-            route: '/authenticated/car-detail/Ferrari',
-            submenu: null
-          },
-          {
-            text: 'Bugatti',
-            icon: '../../assets/img/car.png',
-            route: '/authenticated/car-detail/Bugatti',
-            submenu: null
-          },
-          {
-            text: 'Lamborghini',
-            icon: '../../assets/img/car.png',
-            route: '/authenticated/car-detail/Lamborghini',
-            submenu: null
-          },
-          {
-            text: 'Maserati',
-            icon: '../../assets/img/car.png',
-            route: '/authenticated/car-detail/Maserati',
-            submenu: null
-          }]
-      },
-      {
         text: 'Price top',
         icon: '../../assets/img/car.png',
         route: '/authenticated/car-list/1',
@@ -56,22 +26,10 @@ export const AppMenuItems: Array<MenuItem> = [
       }]
   },
   {
-    text: 'Maintenance',
+    text: 'Car maintenance',
     icon: '../../assets/img/settings.png',
-    route: null,
-    submenu: [
-      {
-        text: 'Car maintenance',
-        icon: '../../assets/img/settings.png',
-        route: '/authenticated/car-maint',
-        submenu: null
-      },
-      {
-        text: 'Settings',
-        icon: '../../assets/img/settings.png',
-        route: '/authenticated/settings',
-        submenu: null
-      }]
+    route: '/authenticated/car-maint',
+    submenu: null
   },
   {
     text: 'Home',
